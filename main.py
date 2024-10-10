@@ -36,7 +36,7 @@ df_adaptado['productOptionDescription1'] = df_adaptado['productOptionDescription
 
 def extrair_numero_handleId(handleId):
     match = re.search(r'\d+', handleId)
-    return int(match.group()) if match else 0  # Se não encontrar número, retorna 0
+    return int(match.group()) if match else 0 
 
 df_adaptado['handleId_num'] = df_adaptado['handleId'].apply(extrair_numero_handleId)
 
